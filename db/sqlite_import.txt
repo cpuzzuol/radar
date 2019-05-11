@@ -1,0 +1,165 @@
+DROP TABLE IF EXISTS his; 
+
+CREATE TABLE his (
+  terrain_type VARCHAR(5) NOT NULL, 
+  band VARCHAR(2) NOT NULL, 
+  polarization VARCHAR(2) NOT NULL, 
+  statistic VARCHAR(15) NOT NULL,
+  a_0 DECIMAL(4,1),
+  a_5 DECIMAL(4,1),
+  a_10 DECIMAL(4,1),
+  a_15 DECIMAL(4,1),
+  a_20 DECIMAL(4,1),
+  a_25 DECIMAL(4,1),
+  a_30 DECIMAL(4,1),
+  a_35 DECIMAL(4,1),
+  a_40 DECIMAL(4,1),
+  a_45 DECIMAL(4,1),
+  a_50 DECIMAL(4,1),
+  a_55 DECIMAL(4,1),
+  a_60 DECIMAL(4,1),
+  a_65 DECIMAL(4,1),
+  a_70 DECIMAL(4,1),
+  a_75 DECIMAL(4,1),
+  a_80 DECIMAL(4,1),
+  PRIMARY KEY (terrain_type, band, polarization, statistic)
+);
+
+.mode csv his
+.import RSST_his_no_countData.csv his
+
+UPDATE his SET 
+   a_0 = NULL 
+   WHERE a_0 = 'NULL';
+
+UPDATE his SET 
+   a_5 = NULL 
+   WHERE a_5 = 'NULL';
+ 
+UPDATE his SET 
+   a_10 = NULL 
+   WHERE a_10 = 'NULL';
+
+UPDATE his SET 
+   a_15 = NULL 
+   WHERE a_15 = 'NULL';
+   
+ UPDATE his SET 
+   a_20 = NULL 
+   WHERE a_20 = 'NULL';
+   
+UPDATE his SET 
+   a_25 = NULL 
+   WHERE a_25 = 'NULL';
+   
+UPDATE his SET 
+   a_30 = NULL 
+   WHERE a_30 = 'NULL';
+   
+UPDATE his SET 
+   a_35 = NULL 
+   WHERE a_35 = 'NULL';
+   
+UPDATE his SET 
+   a_40 = NULL 
+   WHERE a_40 = 'NULL';
+   
+UPDATE his SET 
+   a_45 = NULL 
+   WHERE a_45 = 'NULL';
+   
+UPDATE his SET 
+   a_50 = NULL 
+   WHERE a_50 = 'NULL';
+   
+UPDATE his SET 
+   a_55 = NULL 
+   WHERE a_55 = 'NULL';
+   
+UPDATE his SET 
+   a_60 = NULL 
+   WHERE a_60 = 'NULL';
+   
+UPDATE his SET 
+   a_65 = NULL 
+   WHERE a_65 = 'NULL';
+   
+UPDATE his SET 
+   a_70 = NULL 
+   WHERE a_70 = 'NULL';
+   
+UPDATE his SET 
+   a_75 = NULL 
+   WHERE a_75 = 'NULL';
+   
+UPDATE his SET 
+   a_80 = NULL 
+   WHERE a_80 = 'NULL';
+   
+DROP TABLE IF EXISTS dat; 
+
+CREATE TABLE dat (
+  terrain_type VARCHAR(5) NOT NULL, 
+  band VARCHAR(2) NOT NULL, 
+  polarization VARCHAR(2) NOT NULL, 
+  thetamin DECIMAL(3,1),
+  thetamax DECIMAL(3,1),
+  p1 DECIMAL(5,4),
+  p2 DECIMAL(5,4),
+  p3 DECIMAL(5,4),
+  p4 DECIMAL(5,4),
+  p5 DECIMAL(5,4),
+  p6 DECIMAL(5,4),
+  m1 DECIMAL(5,4),
+  m2 DECIMAL(5,4),
+  m3 DECIMAL(5,4),
+  PRIMARY KEY (terrain_type, band, polarization)
+);
+
+.mode csv his
+.import RSST_dat.csv dat
+
+UPDATE dat SET 
+   theatamin = NULL 
+   WHERE theatamin = 'NULL';
+
+UPDATE dat SET 
+   thetamax = NULL 
+   WHERE thetamax = 'NULL';
+   
+UPDATE dat SET 
+   p1 = NULL 
+   WHERE p1 = 'NULL';
+   
+UPDATE dat SET 
+   p2 = NULL 
+   WHERE p2 = 'NULL';
+   
+UPDATE dat SET 
+   p3 = NULL 
+   WHERE p3 = 'NULL';
+   
+UPDATE dat SET 
+   p4 = NULL 
+   WHERE p4 = 'NULL';
+   
+UPDATE dat SET 
+   p5 = NULL 
+   WHERE p5 = 'NULL';
+   
+UPDATE dat SET 
+   p6 = NULL 
+   WHERE p6 = 'NULL';
+   
+UPDATE dat SET 
+   m1 = NULL 
+   WHERE m1 = 'NULL';
+   
+UPDATE dat SET 
+   m2 = NULL 
+   WHERE m2 = 'NULL';
+   
+UPDATE dat SET 
+   m3 = NULL 
+   WHERE m3 = 'NULL';
+
