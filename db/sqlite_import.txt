@@ -121,7 +121,7 @@ CREATE TABLE dat (
 
 UPDATE dat SET 
    theatamin = NULL 
-   WHERE theatamin = 'NULL';
+   WHERE thetamin = 'NULL';
 
 UPDATE dat SET 
    thetamax = NULL 
